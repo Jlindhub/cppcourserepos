@@ -14,4 +14,5 @@ int main(int argc, char* argv[])
     {
         cout<<"i can't help you if you won't give me a numerical value.";
     }
+    return 0;
 }
