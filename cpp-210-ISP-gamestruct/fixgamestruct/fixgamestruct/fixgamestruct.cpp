@@ -1,55 +1,44 @@
-
-
-
 #include <iostream>
 
+struct vector2d { int x; int y; };
 
-struct firstPlayer
+struct Player
 {
     char Name[10];
     int Score;
-    int PosX;
-    int PosY;
-    int VelX;
-    int VelY;
+    vector2d pos;
+    vector2d vel;
 };
 
-struct secondPlayer
-{
-    char Name[10];
-    int Score;
-    int PosX;
-    int PosY;
-    int VelX;
-    int VelY;
-};
 struct players
 {
-    firstPlayer playerone;
-    secondPlayer playertwo;
+    Player playerOne;
+    Player playerTwo;
 };
 
-
-struct chest1 { int PosX; int PosY; bool Collected; };
-struct chest2 { int PosX; int PosY; bool Collected; };
-struct chest3 { int PosX; int PosY; bool Collected; };
-struct chest4 { int PosX; int PosY; bool Collected; };
-struct key{int PosX;int PosY;bool Collected;};
+struct chest
+{
+    vector2d pos;
+    bool Collected;
+};
+struct key
+{
+    vector2d pos;
+    bool Collected;
+};
 
 struct collectables
 {
-    chest1 chest1;
-    chest2 chest2;
-    chest3 chest3;
-    chest4 chest4;
+    chest chest1;
+    chest chest2;
+    chest chest3;
+    chest chest4;
     key key;
 };
 
-
 struct goal
 {
-    int PosX;
-    int PosY;
+    vector2d pos;
     int WidthX;
     int HeightY;
 };
@@ -68,7 +57,7 @@ int main(int argc, char* argv[])
     //exercise didn't say anything about doing anything with the structs, but will add test sample.
     //test example:
     Game game;
-    game.players.playerone.Score = 69;
-    std::cout << game.players.playerone.Score;
+    game.players.playerOne.Score = 69;
+    std::cout << game.players.playerOne.Score;
     return 0;
 }
