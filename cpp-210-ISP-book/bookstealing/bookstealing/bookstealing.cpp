@@ -14,7 +14,7 @@ Book stealHalfTheBook(Book book){
 }
 
 int main(){
-    Book book;
+    Book book{};
     book.pages = 200;
     printf("Pages of main-Book before stealing:%d\n", book.pages); // 200
     book = stealHalfTheBook(book); // clone
