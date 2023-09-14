@@ -3,7 +3,7 @@ using namespace std;
 bool positionUnoccupied(int selected, char row[])
 {
     if(row[selected] == '1' || row[selected] == '2' || row[selected] == '3' ) {return true;} //+48 is due to this being an ASCII value comparison.
-    else return false;
+    return false;
     
 }
 int main(int argc, char* argv[])
