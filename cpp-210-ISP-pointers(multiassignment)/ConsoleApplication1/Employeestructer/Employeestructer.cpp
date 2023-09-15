@@ -27,9 +27,7 @@ void printAll(employee* list, int length)
 
 int main(int argc, char* argv[])
 {
-    int input;
     employee employees[5];
-    employee* employeese = new employee[input];
 
     for(int i=0; i<5; i++)
     {
@@ -41,6 +39,5 @@ int main(int argc, char* argv[])
     cout<<"you employ: " <<"\n";
     printAll(employees, std::size(employees));
     cout << "\n averaged salary expenditure per person: " << averageSalary(employees, std::size(employees));
-    delete[] employeese;
     return 0;
 }
