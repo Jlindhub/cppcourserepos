@@ -28,3 +28,9 @@ public:
 
     void readString() const;
 };
+
+inline std::ostream& operator<<(std::ostream& os, const String& st)
+{
+    os << st.buffer;
+    return os;
+}

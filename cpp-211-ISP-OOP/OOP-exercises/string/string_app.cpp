@@ -17,15 +17,7 @@ int main() {
     return 0;
 }*/
 
-//not sure where to actually put this
-ostream& operator<<(ostream& os, const String& st)
-{
-    os << st.buffer;
-    return os;
-}
-
-
- int main(int argc, char* argv[])
+int main(int argc, char* argv[])
  {
 
      String test{"test", 100};
