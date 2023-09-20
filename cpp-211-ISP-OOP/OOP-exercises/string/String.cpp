@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+//constructors
 String::String(const char* input, int maxSize):max_size_{maxSize}, length{0}, buffer{new char[maxSize]{}}
 {
     std::cout << "string created with " << input << endl;
@@ -26,7 +27,7 @@ String::String(const String& other) //deep copy
     }
 }
 
-
+//operator defs
 String& String::operator=(const String& other) //copy assignment - when copying into already initialized string
 {
     cout << "string overwritten with " << other.buffer << endl;
@@ -42,6 +43,23 @@ String& String::operator=(const String& other) //copy assignment - when copying 
     return *this;
 }
 
+String String::operator+(const String& other) const
+{
+    String temp = other;
+    temp.max_size_ = this->max_size_ + other.max_size_;
+    temp.append(other.buffer);
+    return temp;
+}
+
+String& String::operator+=(const String& other)
+{
+    cout << "appended " << this->buffer << "with " << other.buffer;
+    append(other.buffer);
+    return *this;
+}
+
+    
+//movers
 String::String( String&& other) noexcept
 {
     cout<< "moving" << other.buffer << endl;
@@ -52,6 +70,7 @@ String::String( String&& other) noexcept
     other.length = 0;
     other.max_size_ = 0;
 }
+
 String& String::operator=(String&& other) noexcept
 {
     if(this == &other) return *this;
@@ -68,6 +87,7 @@ String& String::operator=(String&& other) noexcept
     return *this;
 }
 
+//destructor
 String::~String()
 {
     if(buffer)
@@ -79,6 +99,7 @@ String::~String()
     delete[] buffer;
 }
 
+//other functions
 void String::append(const char* input)
 {
     while(*input!='\0')
