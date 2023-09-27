@@ -6,6 +6,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "string", "string\string.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VectorOperations", "VectorOperations\VectorOperations.vcxproj", "{E8B87A44-9E75-42BE-B3E6-7A577A776509}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polymorphism", "Polymorphism\Polymorphism.vcxproj", "{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -38,5 +40,13 @@ Global
 		{E8B87A44-9E75-42BE-B3E6-7A577A776509}.Release|Win32.Build.0 = Release|Win32
 		{E8B87A44-9E75-42BE-B3E6-7A577A776509}.Release|x64.ActiveCfg = Release|x64
 		{E8B87A44-9E75-42BE-B3E6-7A577A776509}.Release|x64.Build.0 = Release|x64
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Debug|Win32.Build.0 = Debug|Win32
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Debug|x64.ActiveCfg = Debug|x64
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Debug|x64.Build.0 = Debug|x64
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Release|Win32.ActiveCfg = Release|Win32
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Release|Win32.Build.0 = Release|Win32
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Release|x64.ActiveCfg = Release|x64
+		{349E6BA7-BF3E-42B9-BF6B-80E5D31A1B3F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
